@@ -142,7 +142,7 @@ publish/
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
-**/packages/*
+server/**/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
@@ -178,8 +178,6 @@ ClientBin/
 *.pfx
 *.publishsettings
 orleans.codegen.cs
-
-/node_modules
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -229,3 +227,35 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+node_modules/
+.expo/
+web-build/
+dist/
+__generated__/
+.pnp/
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.*
+yarn-debug.log*
+yarn-error.log*
+
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*

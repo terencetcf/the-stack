@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "cd ./packages/mobile && expo-yarn-workspaces postinstall"
+  }
+}

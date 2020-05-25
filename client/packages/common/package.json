@@ -1,0 +1,23 @@
+{
+  "name": "@the-stack/common",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "Terence Tai",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.3"
+  }
+}
