@@ -1,4 +1,4 @@
-namespace TheStack.WebUI
+namespace TheStack.WebApi
 {
     using System;
     using System.Threading.Tasks;

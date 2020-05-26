@@ -1,4 +1,4 @@
-﻿namespace TheStack.WebUI.Services
+﻿namespace TheStack.WebApi.Services
 {
     using System.Security.Claims;
 

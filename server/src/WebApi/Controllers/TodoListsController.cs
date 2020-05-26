@@ -1,8 +1,7 @@
-﻿namespace TheStack.WebUI.Controllers
+﻿namespace TheStack.WebApi.Controllers
 {
     using System.Threading.Tasks;
 
-    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     using TheStack.Application.TodoLists.Commands.CreateTodoList;
@@ -11,7 +10,7 @@
     using TheStack.Application.TodoLists.Queries.ExportTodos;
     using TheStack.Application.TodoLists.Queries.GetTodos;
 
-    [Authorize]
+    //[Authorize]
     public class TodoListsController : ApiController
     {
         [HttpGet]

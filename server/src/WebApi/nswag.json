@@ -3,7 +3,7 @@
   "defaultVariables": null,
   "documentGenerator": {
     "aspNetCoreToOpenApi": {
-      "project": "WebUI.csproj",
+      "project": "WebApi.csproj",
       "msBuildProjectExtensionsPath": null,
       "configuration": null,
       "runtime": null,
@@ -30,7 +30,7 @@
       "serviceHost": null,
       "serviceBasePath": null,
       "serviceSchemes": [],
-      "infoTitle": "CleanArchitecture API",
+      "infoTitle": "The Stack API",
       "infoDescription": null,
       "infoVersion": "1.0.0",
       "documentTemplate": null,
@@ -112,7 +112,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "bin/models/api.ts"
+      "output": "../../../client/mobile/generated/models/api-models.ts"
     }
   }
 }

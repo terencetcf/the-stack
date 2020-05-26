@@ -1,4 +1,4 @@
-namespace TheStack.WebUI
+namespace TheStack.WebApi
 {
     using System.Linq;
 
@@ -12,14 +12,12 @@ namespace TheStack.WebUI
     using NSwag;
     using NSwag.Generation.Processors.Security;
 
-    using TheStack.Application;
     using TheStack.Application.Common.Interfaces;
     using TheStack.Application.DependencyInjections;
-    using TheStack.Infrastructure;
     using TheStack.Infrastructure.DependencyInjections;
     using TheStack.Infrastructure.Persistence;
-    using TheStack.WebUI.Filters;
-    using TheStack.WebUI.Services;
+    using TheStack.WebApi.Filters;
+    using TheStack.WebApi.Services;
 
     public class Startup
     {
@@ -54,12 +52,6 @@ namespace TheStack.WebUI
                 options.SuppressModelStateInvalidFilter = true;
             });
 
-            // In production, the Angular files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/dist";
-            });
-
             services.AddOpenApiDocument(configure =>
             {
                 configure.Title = "TheStack API";
@@ -73,6 +65,8 @@ namespace TheStack.WebUI
 
                 configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));
             });
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -93,10 +87,6 @@ namespace TheStack.WebUI
             app.UseHealthChecks("/health");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            //if (!env.IsDevelopment())
-            //{
-            //    app.UseSpaStaticFiles();
-            //}
 
             app.UseSwaggerUi3(settings =>
             {
@@ -105,6 +95,7 @@ namespace TheStack.WebUI
             });
 
             app.UseRouting();
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthentication();
             app.UseIdentityServer();
@@ -116,19 +107,6 @@ namespace TheStack.WebUI
                     pattern: "{controller}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-
-            //app.UseSpa(spa =>
-            //{
-            //    // To learn more about options for serving an Angular SPA from ASP.NET Core,
-            //    // see https://go.microsoft.com/fwlink/?linkid=864501
-
-            //    spa.Options.SourcePath = "ClientApp";
-
-            //    if (env.IsDevelopment())
-            //    {
-            //        spa.UseAngularCliServer(npmScript: "start");
-            //    }
-            //});
         }
     }
 }

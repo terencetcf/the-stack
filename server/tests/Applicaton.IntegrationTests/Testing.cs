@@ -19,7 +19,7 @@ using Respawn;
 using TheStack.Application.Common.Interfaces;
 using TheStack.Infrastructure.Identity;
 using TheStack.Infrastructure.Persistence;
-using TheStack.WebUI;
+using TheStack.WebApi;
 
 [SetUpFixture]
 public class Testing
@@ -45,7 +45,7 @@ public class Testing
 
         services.AddSingleton(Mock.Of<IWebHostEnvironment>(w =>
             w.EnvironmentName == "Development" &&
-            w.ApplicationName == "TheStack.WebUI"));
+            w.ApplicationName == "TheStack.WebApi"));
 
         services.AddLogging();
 

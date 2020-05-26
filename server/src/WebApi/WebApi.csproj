@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>TheStack.WebUI</RootNamespace>
-    <AssemblyName>TheStack.WebUI</AssemblyName>
+    <RootNamespace>TheStack.WebApi</RootNamespace>
+    <AssemblyName>TheStack.WebApi</AssemblyName>
     <IsPackable>true</IsPackable>
     <!--<IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>-->
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>

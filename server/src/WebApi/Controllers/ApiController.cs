@@ -1,4 +1,4 @@
-﻿namespace TheStack.WebUI.Controllers
+﻿namespace TheStack.WebApi.Controllers
 {
     using MediatR;
 

@@ -1,4 +1,4 @@
-﻿namespace TheStack.WebUI.Filters
+﻿namespace TheStack.WebApi.Filters
 {
     using System;
     using System.Collections.Generic;

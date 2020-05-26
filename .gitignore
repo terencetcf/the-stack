@@ -232,6 +232,7 @@ node_modules/
 .expo/
 web-build/
 dist/
+generated/
 __generated__/
 .pnp/
 .pnp.js
