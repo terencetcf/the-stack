@@ -5,8 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { ApplicationState } from "../../store";
 import { TodosVm } from "../../../generated/models/api-models";
 import { fetchRequest } from "../../store/todos/todosActions";
+import { HomeStackNavProps } from "./HomeParamList";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }: HomeStackNavProps<"Home">) => {
   const dispatch = useDispatch();
   const todos = useSelector<ApplicationState, TodosVm>(
     (state) => state.todos.data
