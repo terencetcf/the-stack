@@ -5391,11 +5391,6 @@ find-cache-dir@^3.2.0:
     make-dir "^3.0.2"
     pkg-dir "^4.1.0"
 
-find-root@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/find-root/-/find-root-1.1.0.tgz#abcfc8ba76f708c42a97b3d685b7e9450bfb9ce4"
-  integrity sha512-NKfW6bec6GfKc0SGx1e07QZY9PE99u0Bft/0rzSD5k3sO/vwkVUpDUKVm5Gpp5Ue3YfShPFTX2070tDs5kB9Ng==
-
 find-up@4.1.0, find-up@^4.0.0, find-up@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-4.1.0.tgz#97afe7d6cdc0bc5928584b7c8d7b16e8a9aa5d19"
@@ -5665,15 +5660,6 @@ get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
-
-get-yarn-workspaces@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/get-yarn-workspaces/-/get-yarn-workspaces-1.0.2.tgz#81591bdb392f1c6bac09cdc8491a6d275781aa44"
-  integrity sha512-Auel048Uclfgr74oNXKZWH30UgKDZXQdfUfgD9iWXdoUGJpeWg9lSuX/FZkQ6RB3KnBfAaf70xQXfwOjiE9rPw==
-  dependencies:
-    find-root "^1.1.0"
-    flatten "^1.0.2"
-    glob "^7.1.2"
 
 getpass@^0.1.1:
   version "0.1.7"
@@ -7759,13 +7745,6 @@ metro-babel-transformer@^0.56.4:
   dependencies:
     "@babel/core" "^7.0.0"
     metro-source-map "^0.56.4"
-
-metro-bundler-config-yarn-workspaces@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/metro-bundler-config-yarn-workspaces/-/metro-bundler-config-yarn-workspaces-1.0.3.tgz#160ba7db8856fe218b866e5e4d2b2c9ac51203bd"
-  integrity sha512-lyaHhYzTmb/LPVKkaKfTrT01LvTqMFLfWEFssbooR1I/zdU90+hGOZ/fuoD0qc8AKeEQkZO6DL41kZdPL0v3rQ==
-  dependencies:
-    get-yarn-workspaces "^1.0.0"
 
 metro-cache@^0.56.4:
   version "0.56.4"
